@@ -1,5 +1,5 @@
 %% Clone Growth Simulation (CGS) of malignant cells in a tumor. 
-% Daniël M. Miedema - Vermeulen Lab - Academic Medical Center - Amsterdam - The Netherlands.
+% DaniÃ«l M. Miedema - Vermeulen Lab - Academic Medical Center - Amsterdam - The Netherlands.
 % August 24th, 2017. 
 
 %% Description
@@ -50,7 +50,7 @@ function CloneSizes=CGS(lambda,a,h)
                     nnc=nc+nnc;
                     nc=0;
                 end
-            else                                                            % If number of clonogenic cells in clone is larger than zero: growth stops. Save clone size for all remaining days until tmax. 
+            else                                                            % If number of clonogenic cells in clone is zero: growth stops. Save clone size for all remaining days until tmax. 
                 CloneSizes(i,day:end)=nc+nnc;
                 t=tmax;
             end
